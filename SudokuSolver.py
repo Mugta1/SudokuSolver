@@ -109,7 +109,8 @@ while True:
                 for x in nums:
                     if x in pvc:
                         if x in pvr:
-                            final.append(x)
+                                if x in pvm:
+                                    final.append(x)
                 #If there is only one element in final, replaces the empty value in sudoku with the solution value, and prints it.
                 if len(final)==1:
                     sudoku[i][j]=final[0]
