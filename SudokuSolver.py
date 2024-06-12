@@ -13,7 +13,7 @@ for i in range(sudoku.shape[0]):
         else:
             print(f'Row{i}, All is well')
     
-    
+
 nums=[1,2,3,4,5,6,7,8,9]
 pvr=[]
 
@@ -43,61 +43,13 @@ while True:
                         
                 #3x3 local check
                 #Creates an array of all elements in the 3x3 Matrix.
-                
+                #I was using multiple loops before to solve this. the method down below is a much better one to separate out the matrix into 3x3 mini-matrix-s
                 pvm2=[]     
-                if i in range(0,3) and j in range(0,3):
-                    
-                    for x in range(0,3):
-                        for y in range(0,3):
-                            pvm2.append(sudoku[x][y]) 
-                
-                if i in range(0,3) and j in range(3,6):
-                    
-                    for x in range(0,3):
-                        for y in range(3,6):
-                            pvm2.append(sudoku[x][y]) 
-                            
-                if i in range(0,3) and j in range(6,9):
-                    
-                    for x in range(0,3):
-                        for y in range(6,9):
-                            pvm2.append(sudoku[x][y]) 
-                            
-                if i in range(3,6) and j in range(0,3):
-                   
-                    for x in range(3,6):
-                        for y in range(0,3):
-                            pvm2.append(sudoku[x][y]) 
-
-                if i in range(3,6) and j in range(3,6):
-                
-                    for x in range(3,6):
-                        for y in range(3,6):
-                            pvm2.append(sudoku[x][y]) 
-                            
-                if i in range(3,6) and j in range(6,9):
-                   
-                    for x in range(3,6):
-                        for y in range(6,9):
-                            pvm2.append(sudoku[x][y]) 
-                
-                if i in range(6,9) and j in range(0,3):
-                    
-                    for x in range(6,9):
-                        for y in range(0,3):
-                            pvm2.append(sudoku[x][y]) 
-                   
-                if i in range(6,9) and j in range(3,6):
-                    
-                    for x in range(6,9):
-                        for y in range(3,6):
-                            pvm2.append(sudoku[x][y]) 
-                         
-                if i in range(6,9) and j in range(6,9):
-                    
-                    for x in range(6,9):
-                        for y in range(6,9):
-                            pvm2.append(sudoku[x][y]) 
+                start_x= (i//3)*3
+                start_y=(j//3)*3
+                for x in range(start_x, start_x+3):
+                    for y in range(start_y, start_y+3):
+                        pvm2.append(sudoku[x][y])                    
                             
                 #Iterates through each element and appends the numbers not present in the array pvm2                   
                 pvm=[]
