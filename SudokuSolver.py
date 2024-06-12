@@ -16,8 +16,12 @@ for i in range(sudoku.shape[0]):
 
 nums=[1,2,3,4,5,6,7,8,9]
 pvr=[]
+#use this to find out the number of times the loop ran before finding the solution  
+count=0
 
+#main loop
 while True:
+    #count+=1
     for i in range(0,9):
         for j in range(0,9):
             if sudoku[i][j]==0:
@@ -62,16 +66,15 @@ while True:
                 for x in nums:
                     if x in pvc:
                         if x in pvr:
-                                if x in pvm:
-                                    final.append(x)
+                            if x in pvm:
+                                final.append(x)
                 #If there is only one element in final, replaces the empty value in sudoku with the solution value, and prints it.
                 if len(final)==1:
                     sudoku[i][j]=final[0]
-                    print(f'solution for position {i,j} are')
-                    for x in final:
-                        print(x)
-                    else:
-                        continue
+                    print(f'solution for position {i,j} are {final[0]}')
+                else: 
+                    continue
+    
     #break the loop when the number of empty spaces in the sudoku becomes zero            
     if np.count_nonzero(sudoku==0)==0:
         break
@@ -80,9 +83,9 @@ while True:
     
 #prints the final array
 for i in range(9):
-    print('\n')
-    for j in range(9):
-        print(sudoku[i][j])
+    print(sudoku[i])
+#prints the number of times the loop ran before finding the solution       
+#print(f"The number of times the loop ran is {count}")
 
 
                         
