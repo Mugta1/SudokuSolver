@@ -74,12 +74,8 @@ while True:
                         pvm.append(z)
                 
                 #Finds the intersection of pvr, pvc and pvm, and appends those in the array "final"
-                final=[]
-                for x in nums:
-                    if x in pvc:
-                        if x in pvr:
-                            if x in pvm:
-                                final.append(x)
+                subintersect= np.intersect1d(pvc, pvm)
+                final=np.intersect1d(pvr, subintersect)
                 #If there is only one element in final, replaces the empty value in sudoku with the solution value, and prints it.
                 if len(final)==1:
                     sudoku[i][j]=final[0]
