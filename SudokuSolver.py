@@ -1,15 +1,28 @@
 ##sudoku solver
 ##the code is working as of now 
 
+
+
 import numpy as np
 #Enter your sudoku in the form of 2d matrix 9x9
-sudoku= np.array([[5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]])
-
+sudoku=np.array([])
+while True:
+    a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:9]
+    if len(a)!=9:
+        print("Wrong Input, try again")
+        continue
+    elif sudoku.shape[0]==9:
+        break
+    else:
+        sudoku.append[a]
+    
+    
+sudoku=np.array(sudoku)
 #checks if the arrays given for sudoku are of correct size.
-for i in range(sudoku.shape[0]):
+for i in range(9):
         if len(sudoku[i])!=9:
             print("wrong")
-            break
+            quit
         else:
             print(f'Row{i}, All is well')
     
