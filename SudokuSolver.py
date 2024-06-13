@@ -23,9 +23,7 @@ for i in range(9):
     print(sudoku[i])
     print("Verify your Sudoku. In case of faults, restart the program.") #add support to re-enter the sudoku without having to restart the program.
     
-    
-sudoku=np.array([[5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]])
-
+sudoku=np.array(sudoku)
 
 nums=[1,2,3,4,5,6,7,8,9]
 pvr=[]
