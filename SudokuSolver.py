@@ -5,26 +5,25 @@
 
 import numpy as np
 #Enter your sudoku in the form of 2d matrix 9x9
-sudoku=np.array([])
-while True:
-    a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:9]
-    if len(a)!=9:
-        print("Wrong Input, try again")
-        continue
-    elif sudoku.shape[0]==9:
+sudoku=[]
+
+####FIX INPUT HANDLING, CAN BE MADE BETTER
+print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy!")
+for i in range(9):
+    a = []
+    for f in range(9):
+        x=int(input(f"Enter the {f+1 } elements of the {i+1} row"))
+        sudoku.append(a)
+    if len(sudoku)==9 and len(sudoku.flatten())==81:
+        print("All rows recorded successfuly")
         break
     else:
-        sudoku.append[a]
-    
-    
-sudoku=np.array(sudoku)
-#checks if the arrays given for sudoku are of correct size.
+        sudoku.append(a)
 for i in range(9):
-        if len(sudoku[i])!=9:
-            print("wrong")
-            quit
-        else:
-            print(f'Row{i}, All is well')
+    print(sudoku[i])
+    print("Verify your Sudoku. In case of faults, restart the program.") #add support to re-enter the sudoku without having to restart the program.
+    
+    
     
 
 nums=[1,2,3,4,5,6,7,8,9]
