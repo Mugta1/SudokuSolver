@@ -10,15 +10,14 @@ sudoku=[]
 ####FIX INPUT HANDLING, CAN BE MADE BETTER
 print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy!")
 for i in range(9):
-    a = []
-    for f in range(9):
-        x=int(input(f"Enter the {f+1 } elements of the {i+1} row"))
-        sudoku.append(a)
+    x=input(f'Enter the {i + 1} row of the Sudoku)
+    if len(x)==o and x.isdigit():
+        y.append(int(a) for a in x)
     if len(sudoku)==9 and len(sudoku.flatten())==81:
         print("All rows recorded successfuly")
         break
     else:
-        sudoku.append(a)
+        sudoku.append(y)
 for i in range(9):
     print(sudoku[i])
     print("Verify your Sudoku. In case of faults, restart the program.") #add support to re-enter the sudoku without having to restart the program.
