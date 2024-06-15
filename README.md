@@ -16,7 +16,7 @@ This repository hosts a Python implementation of a Sudoku solver leveraging NumP
 
 ## Introduction
 
-The Sudoku solver provided here attempts to solve Sudoku puzzles by iteratively filling in empty cells based on valid constraints. It employs a straightforward algorithm to identify potential values for each cell by considering the current state of the rows, columns, and 3x3 subgrids.
+The Sudoku solver provided here attempts to solve Sudoku puzzles by iteratively filling in empty cells based on valid constraints. It employs a straightforward algorithm to identify potential values for each cell by considering the current state of the rows, columns, and 3x3 subgrids. 
 
 ## Requirements
 
@@ -52,7 +52,7 @@ The Sudoku solver provided here attempts to solve Sudoku puzzles by iteratively 
 
 4. **Iterative Process:** Steps 2 and 3 iteratively execute until all cells are filled or no further deterministic assignments are feasible.
 
-5. **Output:** The solved Sudoku grid is printed upon completion.
+5. **Output:** The solved Sudoku grid is printed upon completion. It also prints the time used and the number of times the loop ran to solve the sudoku.
 
 
 ## Future Plans
