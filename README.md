@@ -1,7 +1,5 @@
 # Sudoku Solver
 
-🚧 **Disclaimer: This software is currently under active development and its functionality may vary.** 🚧
-
 This repository hosts a Python implementation of a Sudoku solver leveraging NumPy. The solver endeavors to address the vacant cells of a Sudoku puzzle utilizing fundamental constraint propagation methodologies.
 
 ## Table of Contents
@@ -12,14 +10,13 @@ This repository hosts a Python implementation of a Sudoku solver leveraging NumP
   - [Requirements](#requirements)
   - [Usage](#usage)
   - [How It Works](#how-it-works)
-  - [Limitations](#limitations)
   - [Future Plans](#future-plans)
   - [Contributing](#contributing)
   - [License](#license)
 
 ## Introduction
 
-The Sudoku solver herein aims to resolve the unfilled cells of a Sudoku grid. Employing a rudimentary algorithm, the program evaluates potential values for each empty cell based on the extant state of the rows, columns, and 3x3 subgrids.
+The Sudoku solver provided here attempts to solve Sudoku puzzles by iteratively filling in empty cells based on valid constraints. It employs a straightforward algorithm to identify potential values for each cell by considering the current state of the rows, columns, and 3x3 subgrids.
 
 ## Requirements
 
@@ -44,7 +41,6 @@ The Sudoku solver herein aims to resolve the unfilled cells of a Sudoku grid. Em
    python sudokusolver.py
    ```
 
-The Sudoku grid is currently hardcoded in the `sudokusolver.py` file. You can modify the initial grid by altering values within the `sudoku` array.
 
 ## How It Works
 
@@ -58,20 +54,12 @@ The Sudoku grid is currently hardcoded in the `sudokusolver.py` file. You can mo
 
 5. **Output:** The solved Sudoku grid is printed upon completion.
 
-## Limitations
-
-- The present implementation may not resolve all Sudoku puzzles, particularly those necessitating advanced strategies beyond basic constraint propagation.
-- Potential infinite loops could occur if the algorithm fails to converge on a solution.
-- The code lacks optimization and exhibits verbose, protracted lines.
-- Present codebase readability and maintainability are suboptimal.
 
 ## Future Plans
 
-- Harness NumPy to condense codebase and bolster performance.
-- Enhance algorithmic efficiency to tackle more intricate Sudoku puzzles.
-- Refactor codebase to enhance clarity and maintainability.
-- Integrate a graphical user interface (GUI) for enhanced user interaction.
-- Implement advanced Sudoku solving strategies to accommodate diverse puzzle complexities.
+- **Optimization:** Harness NumPy to condense codebase and bolster performance.
+- **Graphical User Interface:** Integrate a **GUI** for enhanced user interaction.
+
 
 ## Contributing
 
@@ -80,4 +68,6 @@ Contributions are encouraged! Should you identify areas for enhancement or detec
 ## License
 
 This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for further details.
+
+
 
