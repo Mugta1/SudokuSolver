@@ -30,7 +30,8 @@ def sudokusolve(sudoku):
     pvr=[]
     #main loop
     while True:
-        count+=1
+        start=sudoku.copy()
+        count+=1  
         for i in range(0,9):
             for j in range(0,9):
                 if sudoku[i][j]==0:
@@ -79,19 +80,26 @@ def sudokusolve(sudoku):
                         print(f'solution for position {i,j} are {final[0]}')
                     else: 
                         continue
+        if np.array_equal(sudoku,start):
+            print("The given Sudoku has no solutions. Wrong Sudoku Input TwT")
+            break
+        #if no changes have been made to the sudoku, it will end the program to avoid an infinite loop
         
         #break the loop when the number of empty spaces in the sudoku becomes zero            
-        if np.count_nonzero(sudoku==0)==0:
+        elif np.count_nonzero(sudoku==0)==0:
+            for i in range(9):
+                print(sudoku[i])
             break
         else:
             continue
+        
     #prints the final array
-    for i in range(9):
-        print(sudoku[i])
+    
+        
 
 # main function
 def main():
-    print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy!")
+    print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy! ^-^")
     sudoku=inputsud()
     for i in range(9):
         print(sudoku[i])
