@@ -11,13 +11,13 @@ def inputsud():
     sudoku=[]
     for i in range(9):
         while True:
-            x=input(f'Enter the {i + 1} row of the Sudoku') #takes an array with 9 integers as an input and appends it into the sudoku array
+            x=input(f'Enter the {i + 1} row of the Sudoku: ') #takes an array with 9 integers as an input and appends it into the sudoku array
             if len(x)==9 and x.isdigit():
                 y=[int(a) for a in x]
                 sudoku.append(y)
                 break
             else:
-                print("Wrong input. Please try again.")
+                print("Wrong input. Please try again. ")
     return sudoku  #returns the 2d array [9x9] as an output
 
 
@@ -96,7 +96,7 @@ def main():
     for i in range(9):
         print(sudoku[i])
     print("Verify your Sudoku.")
-    check=input("IS the sudoku correct? \n 1. Yes 2. No")
+    check=input("IS the sudoku correct? \n 1. Yes 2. No \n")
     if check.lower()=="no" or check=='2':
         inputsud()
     if check.lower()=='yes' or check=='1':
