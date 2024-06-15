@@ -16,7 +16,7 @@ This repository hosts a Python implementation of a Sudoku solver leveraging NumP
 
 ## Introduction
 
-The Sudoku solver herein aims to resolve the unfilled cells of a Sudoku grid. Employing a rudimentary algorithm, the program evaluates potential values for each empty cell based on the extant state of the rows, columns, and 3x3 subgrids.
+The Sudoku solver provided here attempts to solve Sudoku puzzles by iteratively filling in empty cells based on valid constraints. It employs a straightforward algorithm to identify potential values for each cell by considering the current state of the rows, columns, and 3x3 subgrids.
 
 ## Requirements
 
@@ -41,7 +41,6 @@ The Sudoku solver herein aims to resolve the unfilled cells of a Sudoku grid. Em
    python sudokusolver.py
    ```
 
-The Sudoku grid is currently hardcoded in the `sudokusolver.py` file. You can modify the initial grid by altering values within the `sudoku` array.
 
 ## How It Works
 
@@ -58,8 +57,8 @@ The Sudoku grid is currently hardcoded in the `sudokusolver.py` file. You can mo
 
 ## Future Plans
 
-- Harness NumPy to condense codebase and bolster performance.
-- Integrate a graphical user interface (GUI) for enhanced user interaction.
+- **Optimization:** Harness NumPy to condense codebase and bolster performance.
+- **Graphical User Interface:** Integrate a **GUI** for enhanced user interaction.
 
 
 ## Contributing
@@ -69,4 +68,6 @@ Contributions are encouraged! Should you identify areas for enhancement or detec
 ## License
 
 This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for further details.
+
+
 
