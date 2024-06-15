@@ -7,18 +7,17 @@ import numpy as np
 
 #Enter your sudoku in the form of 2d matrix 9x9
 #input function, takes inputs in the form of a 9 length array, 9 times, to form and return a 9x9 array(sudoku)
-def input():
+def inputsud():
     sudoku=[]
     for i in range(9):
         while True:
             x=input(f'Enter the {i + 1} row of the Sudoku') #takes an array with 9 integers as an input and appends it into the sudoku array
             if len(x)==9 and x.isdigit():
-                y=[]
-                y.append(int(a) for a in x)
+                y=[int(a) for a in x]
                 sudoku.append(y)
                 break
             else:
-                continue
+                print("Wrong input. Please try again.")
     return sudoku  #returns the 2d array [9x9] as an output
 
 
@@ -93,14 +92,14 @@ def sudokusolve(sudoku):
 # main function
 def main():
     print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy!")
-    sudoku=input()
+    sudoku=inputsud()
     for i in range(9):
         print(sudoku[i])
     print("Verify your Sudoku.")
     check=input("IS the sudoku correct? \n 1. Yes 2. No")
-    if check.lower()=="no":
-        input()
-    if check.lower()=='yes':
+    if check.lower()=="no" or check=='2':
+        inputsud()
+    if check.lower()=='yes' or check=='1':
         sudokusolve(sudoku)
     #print(f'the number of times the loop ran aws {count})
 
