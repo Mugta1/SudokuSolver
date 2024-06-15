@@ -97,7 +97,7 @@ def sudokusolve(sudoku):
         else:
             continue
     endtime=time.time()
-    print(f'The total time taken in solving this sudoku is {endtime-starttime}')
+    print(f'The total time taken in solving this sudoku is {endtime-starttime} seconds')
     print(f'The loop ran {count} times.')
     
         
