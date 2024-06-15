@@ -80,6 +80,7 @@ def sudokusolve(sudoku):
                         print(f'solution for position {i,j} are {final[0]}')
                     else: 
                         continue
+        #Checks if any changes have been made to the array.
         if np.array_equal(sudoku,start):
             print("The given Sudoku has no solutions. Wrong Sudoku Input TwT")
             break
@@ -87,14 +88,15 @@ def sudokusolve(sudoku):
         
         #break the loop when the number of empty spaces in the sudoku becomes zero            
         elif np.count_nonzero(sudoku==0)==0:
+            #prints the final array
+    
             for i in range(9):
                 print(sudoku[i])
             break
         else:
             continue
         
-    #prints the final array
-    
+   
         
 
 # main function
@@ -112,6 +114,7 @@ def main():
     if check.lower()=='yes' or check=='1':
         #Solve the sudoku and print the values.
         sudokusolve(sudoku)
-    #print(f'the number of times the loop ran aws {count})
+    
+    #print(f'The loop ran {count} times.')
 
 main()
