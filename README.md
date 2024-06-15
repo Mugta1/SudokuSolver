@@ -1,7 +1,5 @@
 # Sudoku Solver
 
-🚧 **Disclaimer: This software is currently under active development and its functionality may vary.** 🚧
-
 This repository hosts a Python implementation of a Sudoku solver leveraging NumPy. The solver endeavors to address the vacant cells of a Sudoku puzzle utilizing fundamental constraint propagation methodologies.
 
 ## Table of Contents
@@ -12,7 +10,6 @@ This repository hosts a Python implementation of a Sudoku solver leveraging NumP
   - [Requirements](#requirements)
   - [Usage](#usage)
   - [How It Works](#how-it-works)
-  - [Limitations](#limitations)
   - [Future Plans](#future-plans)
   - [Contributing](#contributing)
   - [License](#license)
@@ -58,20 +55,12 @@ The Sudoku grid is currently hardcoded in the `sudokusolver.py` file. You can mo
 
 5. **Output:** The solved Sudoku grid is printed upon completion.
 
-## Limitations
-
-- The present implementation may not resolve all Sudoku puzzles, particularly those necessitating advanced strategies beyond basic constraint propagation.
-- Potential infinite loops could occur if the algorithm fails to converge on a solution.
-- The code lacks optimization and exhibits verbose, protracted lines.
-- Present codebase readability and maintainability are suboptimal.
 
 ## Future Plans
 
 - Harness NumPy to condense codebase and bolster performance.
-- Enhance algorithmic efficiency to tackle more intricate Sudoku puzzles.
-- Refactor codebase to enhance clarity and maintainability.
 - Integrate a graphical user interface (GUI) for enhanced user interaction.
-- Implement advanced Sudoku solving strategies to accommodate diverse puzzle complexities.
+
 
 ## Contributing
 
