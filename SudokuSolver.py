@@ -90,9 +90,8 @@ def sudokusolve(sudoku):
     for i in range(9):
         print(sudoku[i])
 
-
 # main function
-def sudoksolver():
+def main():
     print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy!")
     sudoku=input()
     for i in range(9):
@@ -104,3 +103,5 @@ def sudoksolver():
     if check.lower()=='yes':
         sudokusolve(sudoku)
     #print(f'the number of times the loop ran aws {count})
+
+main()
