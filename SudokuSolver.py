@@ -2,7 +2,7 @@
 ##the code is working as of now 
 
 
-
+import time
 import numpy as np
 
 #Enter your sudoku in the form of 2d matrix 9x9
@@ -23,6 +23,7 @@ def inputsud():
 
 #The main solving algorithm     
 def sudokusolve(sudoku):
+    starttime=time.time()
     sudoku=np.array(sudoku)
     count=0
 
@@ -95,6 +96,10 @@ def sudokusolve(sudoku):
             break
         else:
             continue
+    endtime=time.time()
+    print(f'The total time taken in solving this sudoku is {endtime-starttime}')
+    print(f'The loop ran {count} times.')
+    
         
    
         
@@ -114,7 +119,5 @@ def main():
     if check.lower()=='yes' or check=='1':
         #Solve the sudoku and print the values.
         sudokusolve(sudoku)
-    
-    #print(f'The loop ran {count} times.')
 
 main()
