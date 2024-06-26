@@ -91,8 +91,7 @@ def sudokusolve(sudoku):
         elif np.count_nonzero(sudoku==0)==0:
             #prints the final array
     
-            for i in range(9):
-                print(sudoku[i])
+            print(f "{sudoku}")
             break
         else:
             continue
@@ -108,8 +107,7 @@ def sudokusolve(sudoku):
 def main():
     print("Welcome to sudoku solver.\n  Enter your 9x9 Sudoku as prompted. \n For empty spaces, enter 0. \n Enjoy! ^-^")
     sudoku=inputsud()
-    for i in range(9):
-        print(sudoku[i])
+    print(f "{sudoku}")
     print("Verify your Sudoku.")
     #Gives the user an opportunity to check if the sudoku input is correct, if not, they can chose to enter the sudoku again.
     check=input("Is the sudoku correct? \n 1. Yes 2. No \n")
